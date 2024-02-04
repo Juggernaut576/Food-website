@@ -1,0 +1,228 @@
+/*CSS reset*/
+*{
+    margin: 0;   /*initially we are setting pargin and padding for all elements as 0*/
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS variables */
+:root{
+    --navbar-height:40px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+/* Navigation bar:Logo and Image */
+#logo{
+    margin: 5px 10px;
+}
+
+#logo img{
+    height: 60px;
+    margin: 34px 45px;
+}
+
+/* Navigation bar:List styling */
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo 2', cursive;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: aliceblue;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+
+}
+
+#navbar::before{      /*Using pseudo selector*/
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height:80%; /*This sets the height of the transoarent strip that is coming behind Home and logo etc*/
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+/* Home Section */
+#home{
+    display:flex;
+    flex-direction:column;
+    padding:3px 200px;
+    height: 450px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{          /*Using pseudo selector*/
+    content: "";
+    background:url('../img/matheus-frade-KO46ZfbNdtY-unsplash.jpg') no-repeat center center/cover ;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height:90%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+}
+
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Service section */
+#services{
+    margin: 30px;
+    display: flex;
+    text-align: center;
+}
+#services .box{
+    border: 2px solid brown;
+    padding: 30px;
+    margin: 3px 35px;
+    border-radius: 28px;
+    background: aliceblue;
+    margin-bottom: 18px;
+}
+
+#services .box img{
+        height: 165px;
+        margin: auto;
+        display: block; /*Remember without display:block command margin auto will not work here*/
+}
+#services .box p{
+    font-family: 'Baloo 2', cursive;
+}
+
+/* Clients Section */
+#client-section{
+    position: relative;
+    height: 344px;
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url(../img/pizza.jpg);
+    width: 100%;
+    height: 100%;
+    z-index:-1;
+    opacity: 0.6;
+}
+#clients img{
+    height: 126px;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+/* Contacts section */
+#contact{
+     position: relative;
+}
+
+#contact::before{
+    content:"";
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    margin: 0px -190px;
+    z-index: -1;
+    opacity: 0.35;
+    background: url(/img/contact.png);
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Baloo 2', cursive;
+}
+
+footer{
+    background:black;
+    color: aliceblue;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{  /*We can use same type of headings at other plces just by using utility class method*/
+    font-family: 'Baloo 2', cursive;
+    font-size: 2.8rem;
+    padding-top: 30px;
+    text-align: center;
+}
+.h-secondary{  /*We can use same type of headings at other plces just by using utility class method*/
+        font-family: 'Baloo 2', cursive;
+        font-size: 2.3rem;
+        padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid whitesmoke;
+    background-color: rgb(254, 201, 132);
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer; /*This will change the cursor to a hand when we take it over the button*/
+}
+
+.center{
+   text-align: center;
+   font-family: 'Baloo 2', cursive;
+}
